@@ -68,6 +68,11 @@ Route::prefix("admin")->group(function () {
         Route::get('/change-password', [AdminProfileController::class, 'AdminPasswordView'])->name('admin_password_view');
         Route::post('/change-password', [AdminProfileController::class, 'AdminPasswordUpdate'])->name('admin_password_update');
     });
+    Route::middleware(['admin'])->prefix("setups")->group(function () {
+        Route::get("/view", [AdminProfileController::class, "AdminProfileView"])->name("admin_profile_view");
+        Route::get("/edit", [AdminProfileController::class, "AdminProfileEdit"])->name("admin_profile_edit");
+        Route::post("/edit", [AdminProfileController::class, "AdminProfileEditStore"])->name("admin_profile_edit_store");
+    });
 });
 // End Admin routes
 
