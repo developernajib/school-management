@@ -1,5 +1,5 @@
 @extends('backend.admin.dashboard.admin_master')
-@section('title', 'SMY | Dashboard - View All User')
+@section('title', 'SMS | Dashboard - View All User')
 @section('admin')
     <div class="content-wrapper">
         <section class="content">

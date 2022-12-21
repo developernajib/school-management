@@ -14,9 +14,10 @@
 
     {{-- Theme --}}
     <link rel="stylesheet" href="{{ asset('assets/admin_dashboard/css/vendors_css.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/admin_dashboard/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/admin_dashboard/css/font-awesome.css') }}') }}">
     <link rel="stylesheet" href="{{ asset('assets/admin_dashboard/css/skin_color.css') }}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+    <link rel="stylesheet" href="{{ asset('assets/admin_dashboard/css/style.css') }}">
 </head>
 
 <body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
@@ -32,9 +33,9 @@
         <script src="{{ asset('assets/vendor_components/apexcharts-bundle/dist/apexcharts.js') }}"></script>
         <script src="{{ asset('assets/admin_dashboard/js/template.js') }}"></script>
         <script src="{{ asset('assets/admin_dashboard/js/pages/dashboard.js') }}"></script>
-        <script src="{{ asset('assets/icons/feather-icons/feather.min.js') }}"></script>
         <script src="{{ asset('assets/vendor_components/datatable/datatables.min.js') }}"></script>
         <script src="{{ asset('assets/admin_dashboard/js/pages/data-table.js') }}"></script>
+
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
         <script type="text/javascript">

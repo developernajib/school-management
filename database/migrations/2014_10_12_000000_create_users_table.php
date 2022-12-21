@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();;
+            $table->id();
             $table->string('name')->nullable();
-            $table->string('email')->nullable();
+            $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('mobile')->nullable();
@@ -29,11 +29,13 @@ return new class extends Migration
             $table->string('id_no')->nullable();
             $table->date('dob')->nullable();
             $table->string('code')->nullable();
+            $table->string('role')->nullable()->comment('admin=head of sotware,operator=computer operator,user=employee');
             $table->date('join_date')->nullable();
             $table->integer('designation_id')->nullable();
             $table->double('salary')->nullable();
             $table->tinyInteger('status')->default(1)->comment('0=inactive,1=active');
             $table->rememberToken();
+            $table->foreignId('current_team_id')->nullable();
             $table->text('profile_photo_path')->nullable();
             $table->timestamps();
         });

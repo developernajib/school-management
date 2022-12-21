@@ -1,5 +1,5 @@
 @extends('dashboard_base')
-@section('title', 'SMY | Dashboard')
+@section('title', 'SMS | Dashboard')
 @section('main_content')
 
     @include('backend.admin.dashboard.admin_dashboard_header')
