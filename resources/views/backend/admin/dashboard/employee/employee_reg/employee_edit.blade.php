@@ -135,7 +135,7 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                @if (!@editData)
+                                                @if (!$editData)
                                                     <div class="col-md-3">
                                                         <div class="form-group">
                                                             <h5>Salary <span class="text-danger">*</span></h5>
@@ -146,7 +146,7 @@
                                                         </div>
                                                     </div>
                                                 @endif
-                                                @if (!@editData)
+                                                @if (!$editData)
                                                     <div class="col-md-3">
                                                         <div class="form-group">
                                                             <h5>Joining Date <span class="text-danger">*</span></h5>
@@ -203,5 +203,5 @@
             });
         });
     </script>
-    
+
 @endsection

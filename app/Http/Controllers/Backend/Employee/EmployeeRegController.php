@@ -100,7 +100,7 @@ class EmployeeRegController extends Controller
 	{
 		$data['editData'] = Moderator::find($id);
 		$data['designation'] = Designation::all();
-		return view('backend.employee.employee_reg.employee_edit', $data);
+		return view('backend.admin.dashboard.employee.employee_reg.employee_edit', $data);
 	}
 
 	public function EmployeeUpdate(Request $request, $id)
@@ -136,7 +136,7 @@ class EmployeeRegController extends Controller
 	public function EmployeeDetails($id)
 	{
 		$data['details'] = Moderator::find($id);
-		$pdf = PDF::loadView('backend.employee.employee_reg.employee_details_pdf', $data);
+		$pdf = PDF::loadView('backend.admin.dashboard.employee.employee_reg.employee_details_pdf', $data);
 		$pdf->SetProtection(['copy', 'print'], '', 'pass');
 		$pdfName = 'employee-r-id- ' . $id;
 		return $pdf->stream($pdfName);
